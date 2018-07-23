@@ -14,7 +14,7 @@ passport.serializeUser(function (user, done) {
 passport.deserializeUser(function (user, done) {
     var result = user;
     result.password = "";
-    console.log('deserializeUser');
+    // console.log('deserializeUser');
     done(null, result);
 });
 passport.use(new LocalStrategy(
@@ -43,6 +43,7 @@ router.get('/', function(req, res){
 });
 
 router.get('/join', function(req, res){
+    res.locals.navibarActive = 'join';
     res.render('accounts/join');
 });
 router.post('/join', function(req, res){
@@ -57,6 +58,7 @@ router.post('/join', function(req, res){
 });
 
 router.get('/login', function(req, res){
+    res.locals.navibarActive = 'login';
     res.render('accounts/login', { flashMessage : req.flash().error});
 });
 

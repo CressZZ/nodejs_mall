@@ -38,7 +38,11 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 
+router.use('/', function(req, res, next){
+    res.locals.navibarActive = 'admin';
+    next()
 
+})
 router.get('/', function(req, res){
     res.send('admin app11111')
 })

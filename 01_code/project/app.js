@@ -22,6 +22,7 @@ db.on( 'error' , console.error ); //에러시 로그를 뿌림 db.once( 'open' ,
 db.once('open', function(){
     console.log('mongodbv connect');
 });
+
 // DB 접속
 var connect = mongoose.connect('mongodb://127.0.0.1:27017/fastcampus', {useMongoClient: true});
 autoIncrement.initialize(connect);
@@ -36,7 +37,6 @@ var chat = require('./routes/chat');
 var products = require('./routes/products');
 var cart = require('./routes/cart');
 var checkout = require('./routes/checkout');
-
 
 
 
@@ -55,10 +55,11 @@ app.use(bodyParser.urlencoded({ extended: false })); //bodyParser.urlencoded
 app.use(cookieParser()); // cookieParser
 
 //업로드 path를 static folder로 추가
-app.use('/uploads', express.static('uploads'));
+app.use('/uploads', express.static(__dirname + '/uploads'));
 
 // static path 추가
-app.use('/static', express.static('static'));
+app.use('/static', express.static(__dirname+ '/static'));
+
 
 //session 관련 셋팅
 var connectMongo = require('connect-mongo');
@@ -88,7 +89,7 @@ app.use(session({
 }));
 
 app.use((req, res, next)=>{
-    console.log(req.session)
+    // console.log(req.session)
     next()
 })
 app.use(sessionMiddleWare);
@@ -111,6 +112,8 @@ app.use(function(req, res, next) {
     app.locals.userData = req.user; //사용 정보를 보내고 싶으면 이와같이 셋팅
     next();
 });
+
+
 
 
 // 라우팅 사용

@@ -102,6 +102,7 @@ router.get('/success', function(req,res){
 });
 
 router.get('/nomember', function(req,res){
+    res.locals.navibarActive = 'nomember';
     res.render('checkout/nomember');
 });
 
