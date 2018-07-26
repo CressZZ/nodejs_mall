@@ -6,6 +6,7 @@ node.js를 사용하여 쇼핑몰 만들기 프로젝트
 ### 1) 서버
 - aws
 - nginx
+- git : 배포
 ### 2) back-end
 - nodejs : 서버단 구성 언어
 - express : Node 서버 구성 프레임 워크
