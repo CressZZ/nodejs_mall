@@ -12,7 +12,7 @@ node.js를 사용하여 쇼핑몰 만들기 프로젝트
 - express : Node 서버 구성 프레임 워크
 - morgan : 로그
 - socket.io : chat 
-- iamporter : 결재
+- iamporter : 결재 모듈
 - passport : 로그인
 - cheerio : 크롤링(배송안내)
 - express-session : 로그인 및 기타 보안관련
