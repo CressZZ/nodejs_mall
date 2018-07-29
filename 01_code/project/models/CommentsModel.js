@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'); //의존성으로 mongodb를 사용하기 때문에 자동으로 mongodb를 사용한다.
 var Schema = mongoose.Schema;
-var autoincrement = require('mongoose-auto-increment');
+var autoincrement = require('mongoose-plugin-autoinc');
 
 
 var CommentsSchema = new Schema({

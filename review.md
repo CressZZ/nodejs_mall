@@ -20,7 +20,7 @@ node.js를 사용하여 쇼핑몰 만들기 프로젝트
 ### 3) Data-base
 - mongodb : NOSql
 - mongoose : nodejs mongodb 패키지 
-- mongoose-auto-increment : mongoose 플러그인
+- mongoose-plugin-autoinc : mongoose 플러그인
 ### 4) front-end
 - jquery 
 - bootstrap4

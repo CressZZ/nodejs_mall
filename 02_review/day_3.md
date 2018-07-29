@@ -242,9 +242,9 @@ app.use('/admin', admin);
 ```sh
 npm install --save mongodb mongoose@4.11.2
 ```
-- mongoose-auto-increment : `_id` 값이 1씩 자동으로 증가한다. 원래는 이상한 문자가 나온다. 
+- mongoose-plugin-autoinc : `_id` 값이 1씩 자동으로 증가한다. 원래는 이상한 문자가 나온다. 
 ```sh
-npm install --save mongoose-auto-increment
+npm install --save mongoose-plugin-autoinc
 ```
 
 ### mongodb 적용하기 
@@ -254,7 +254,7 @@ var express = require('express');
  
 //MongoDB 접속
 var mongoose = require('mongoose');
-var autoIncrement = require('mongoose-auto-increment');
+var autoIncrement = require('mongoose-plugin-autoinc');
  
 var db = mongoose.connection;
 db.on('error', console.error);
@@ -270,7 +270,7 @@ autoIncrement.initialize(connect);
 ```js
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var autoIncrement = require('mongoose-auto-increment');
+var autoIncrement = require('mongoose-plugin-autoinc');
  
 //생성될 필드명을 정한다.
 var ProductsSchema = new Schema({

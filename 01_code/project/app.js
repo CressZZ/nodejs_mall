@@ -15,7 +15,7 @@ var session = require('express-session');
 // MobgoDB 접속 
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise; //moggose promise 설정
-var autoIncrement = require('mongoose-auto-increment'); // mongoDB 관련 라이브러리?
+var autoIncrement = require('mongoose-plugin-autoinc'); // mongoDB 관련 라이브러리?
 
 var db = mongoose.connection; //접속 
 db.on( 'error' , console.error ); //에러시 로그를 뿌림 db.once( 'open' , function(){
