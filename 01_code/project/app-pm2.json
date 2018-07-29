@@ -6,7 +6,7 @@
   "autorestart": true,
   "watch": true,
   "env":{
-    "NODE_ENV":"production"
+    "NODE_ENV":"productionss"
   },
   "exec_mode": "fork_mode",
   "instance_var": "NODE_APP_INSTANCE",
