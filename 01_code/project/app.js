@@ -25,7 +25,7 @@ db.once('open', function(){
 
 // DB 접속
 var connect = mongoose.connect('mongodb://127.0.0.1:27017/fastcampus', {useMongoClient: true});
-autoIncrement.initialize(connect);
+// autoIncrement.initialize(connect);
 
 // 라우터 설정
 var admin = require('./routes/admin');
